@@ -15,6 +15,8 @@ export default {
       },
       colors: {
         "pale-purple": "#F2E7FF",
+        "neon-green": "#6ADE2C",
+        "dark-green": "#37C218",
       },
     },
   },
