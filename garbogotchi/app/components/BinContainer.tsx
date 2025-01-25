@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function BinContainer(props: Readonly<{ bins: BinProps[] }>) {
   return (
     <>
-      <div className="flex gap-[4rem]">
+      <div className="flex gap-[2rem] min-h-screen justify-center items-center flex-wrap">
         {props.bins.map((bin, index) => {
           return (
             <Image
