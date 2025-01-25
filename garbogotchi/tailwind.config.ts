@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 export default {
   content: [
@@ -9,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Cabin", "sans-serif"],
-        jersey: ["Jersey 20", "sans-serif"],
+        cabin: ["var(--font-cabin-sans)", ...fontFamily.sans],
+        jersey: ["var(--font-jersey-20)", ...fontFamily.sans],
       },
       colors: {
         "pale-purple": "#F2E7FF",
