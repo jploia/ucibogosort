@@ -7,7 +7,10 @@ export default function LandingPage() {
   return (
     <>
       <div className="">
-        <p className="font-cabin text-7xl">Garbagotchi</p>
+        <div className="flex">
+          <p className="font-cabin text-7xl">Garba</p>
+          <p className="font-jersey text-7xl">gotchi</p>
+        </div>
         <p className="font-cabin text-md">
           Learn what being the #1 Cool School means.
         </p>
