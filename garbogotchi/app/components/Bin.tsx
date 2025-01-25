@@ -18,7 +18,7 @@ export default function Bin() {
 
   return (
     <>
-      <div>
+      <div className="flex gap-[4rem]">
         {binType.map((binType, index) => {
           return (
             <Image
