@@ -8,9 +8,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ["Cabin", "sans-serif"],
+        jersey: ["Jersey 20", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "pale-purple": "#F2E7FF",
       },
     },
   },
