@@ -16,7 +16,7 @@ export default function LandingPage() {
         </p>
         <motion.button
           whileHover={{ scale: 1.1, backgroundColor: "#37C218" }}
-          className="font-jersey text-white text-3xl bg-neon-green px-3 py-1.5 rounded-3xl"
+          className="font-jersey text-white text-4xl bg-neon-green px-3 py-1.25 rounded-3xl"
         >
           Start
         </motion.button>
