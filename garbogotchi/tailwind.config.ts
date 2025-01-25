@@ -9,14 +9,16 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        landing: "url('/landingbg.png')",
+      },
       fontFamily: {
         cabin: ["var(--font-cabin-sans)", ...fontFamily.sans],
         jersey: ["var(--font-jersey-20)", ...fontFamily.sans],
       },
       colors: {
         "pale-purple": "#F2E7FF",
-        "neon-green": "#6ADE2C",
-        "dark-green": "#37C218",
+        "dark-blue": "#384EE0",
       },
     },
   },
