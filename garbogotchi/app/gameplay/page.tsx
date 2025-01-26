@@ -94,14 +94,42 @@ export default function GameplayPage() {
         <>
           <div style={{ backgroundColor: "#8FB6F4" }}>
             <div className="h-[100vh] w-[100vw] justify-center items-center flex flex-col">
-              <p className="font-cabin text-5xl pb-4">
+              <p className="pb-2 font-cabin text-5xl">
                 Game over! Your score is {userScore}
               </p>
+              <p className="font-cabin text-2xl pb-2">
+                Loved our game? Check out these amazing resources to make your
+                Garbagotchi even happier!
+              </p>
+              <a
+                className="font-cabin text-dark-blue"
+                href="https://earth.org/minimising-landfill-waste/"
+              >
+                Landfill Waste: What can we do to minimize it?
+              </a>
+              <a
+                className="font-cabin text-dark-blue"
+                href="https://search.earth911.com/"
+              >
+                Recycling Center Search
+              </a>
+              <a
+                className="font-cabin text-dark-blue"
+                href="https://www.fm.uci.edu/work-units/custodial/index.php"
+              >
+                Waste Management Guidelines
+              </a>
+              <a
+                className="pb-4 font-cabin text-dark-blue"
+                href="https://www.litterless.com/where-to-compost/california"
+              >
+                Where to Compost in California
+              </a>
               <a href="/">
                 {" "}
                 <motion.button
                   whileHover={{ scale: 1.1, backgroundColor: "#202AB7" }}
-                  className="font-cabin text-white text-4xl bg-dark-blue px-3.5 py-1.25 rounded-3xl"
+                  className="font-cabin text-white text-4xl bg-dark-blue px-5 py-2 rounded-3xl"
                 >
                   Home
                 </motion.button>
