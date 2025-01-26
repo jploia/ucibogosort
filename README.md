@@ -1,1 +1,3 @@
 # ucibogosort
+
+npm run dev
