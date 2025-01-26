@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Main() {
   return (
@@ -18,6 +19,13 @@ export default function Main() {
       >
         <div className="flex absolute h-[100vh] w-[100vw] justify-center items-center">
           <div>
+            {/* <Image
+              src="/logo.png"
+              height={80}
+              width={80}
+              alt="trashcan ant eater"
+              className="flex justify-center content-center flex-wrap"
+            /> */}
             <div className="flex justify-center flex-wrap">
               <p className="font-cabin text-8xl">Garba</p>
               <p className="font-jersey text-8xl">gotchi</p>
@@ -31,7 +39,7 @@ export default function Main() {
             >
               <motion.button
                 whileHover={{ scale: 1.1, backgroundColor: "#202AB7" }}
-                className="font-jersey text-white text-6xl bg-dark-blue px-3 py-1.25 rounded-2xl"
+                className="font-jersey text-white text-6xl bg-dark-blue px-3.5 py-1.25 rounded-3xl"
               >
                 Start
               </motion.button>
