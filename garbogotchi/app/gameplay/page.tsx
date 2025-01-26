@@ -5,6 +5,7 @@ import BinContainer from "@/app/components/BinContainer";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+// import { useDrag } from 'react-dnd';
 // import "./globals.css";
 
 export default function GameplayPage() {
@@ -41,9 +42,10 @@ export default function GameplayPage() {
 
   const [userClick, setUserClick] = useState(false);
   const [userScore, setUserScore] = useState(0);
+  const numPrompts = 10;
 
   async function getData() {
-    const url = "http://127.0.0.1:5000/get_prompts?num_prompts=10";
+    const url = `http://127.0.0.1:5000/get_prompts?num_prompts=${numPrompts}`;
     const response = await fetch(url);
     if (!response.ok) {
       console.error(`Response status: ${response.status}`);
@@ -70,10 +72,15 @@ export default function GameplayPage() {
     }
   };
 
+  const [gameOver, setGameOver] = useState(false);
+
   const nextButtonClick = () => {
     if (userClick) {
       setUserClick(false);
       setPromptIndex(promptIndex + 1);
+    }
+    if (promptIndex >= numPrompts - 1) {
+      setGameOver(true);
     }
   };
 
@@ -82,7 +89,28 @@ export default function GameplayPage() {
   }, []);
 
   if (loadedImage && !isLoading) {
-    if (!userClick) {
+    if (gameOver) {
+      return (
+        <>
+          <div style={{ backgroundColor: "#8FB6F4" }}>
+            <div className="h-[100vh] w-[100vw] justify-center items-center flex flex-col">
+              <p className="font-cabin text-5xl pb-4">
+                Game over! Your score is {userScore}
+              </p>
+              <a href="/">
+                {" "}
+                <motion.button
+                  whileHover={{ scale: 1.1, backgroundColor: "#202AB7" }}
+                  className="font-cabin text-white text-4xl bg-dark-blue px-3.5 py-1.25 rounded-3xl"
+                >
+                  Home
+                </motion.button>
+              </a>
+            </div>
+          </div>
+        </>
+      );
+    } else if (!userClick) {
       return (
         <>
           <div style={{ backgroundColor: "#8FB6F4" }}>
@@ -100,7 +128,7 @@ export default function GameplayPage() {
                   />
                 </motion.div>
                 <motion.div
-                  className="h-screen  flex items-center justify-center"
+                  className="h-screen flex items-center justify-center"
                   key={1}
                   whileHover={{ scale: 1.1 }}
                 >
@@ -128,13 +156,19 @@ export default function GameplayPage() {
               </div>
               <div className="items-center h-[50vh] flex gap-8">
                 <div className="relative">
-                  <Image
-                    src={prompts[promptIndex].url}
-                    className="place-items-center"
-                    width={225}
-                    height={225}
-                    alt={prompts[promptIndex].url}
-                  />
+                  <motion.div
+                    drag="x"
+                    // whileDrag={{ scale: 1.2, backgroundColor: "#f00" }}
+                    dragConstraints={{ left: 0, right: 300 }}
+                  >
+                    <Image
+                      src={prompts[promptIndex].url}
+                      className="place-items-center"
+                      width={225}
+                      height={225}
+                      alt={prompts[promptIndex].url}
+                    />
+                  </motion.div>
                   <Image
                     src={"/logo.png"}
                     className="h-32 w-36 absolute -bottom-8 -right-12"
@@ -157,7 +191,7 @@ export default function GameplayPage() {
             </p>
             <motion.button
               whileHover={{ scale: 1.1, backgroundColor: "#202AB7" }}
-              className="font-cabin text-white text-4xl bg-dark-blue px-3.5 py-1.25 rounded-3xl"
+              className="font-cabin text-white text-4xl bg-dark-blue px-5 py-2 rounded-3xl"
               onClick={nextButtonClick}
             >
               Next

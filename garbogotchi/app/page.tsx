@@ -19,19 +19,12 @@ export default function Main() {
       >
         <div className="flex h-[100vh] w-[100vw] justify-center items-center">
           <div className="mt-[130px]">
-            {/* <Image
-              src="/logo.png"
-              height={80}
-              width={80}
-              alt="trashcan ant eater"
-              className="flex justify-center content-center flex-wrap"
-            /> */}
             <div className="flex justify-center">
               <Image
                 src="/logo.PNG"
                 width={100}
                 height={100}
-                alt="yes"
+                alt="logo"
                 className="h-18 w-18"
               />
             </div>
