@@ -1,4 +1,4 @@
-# ucibogosort 🍌
+# Garbagotchi 🍌
 
 npm run dev
 
