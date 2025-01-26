@@ -86,52 +86,63 @@ export default function GameplayPage() {
       return (
         <>
           <div style={{ backgroundColor: "#8FB6F4" }}>
-            <div className="h-[100vh] w-[100vw] justify-center items-center flex">
-              <motion.div key={0} whileHover={{ scale: 1.1 }}>
-                <Image
-                  src={binType[0].src}
-                  width={400}
-                  height={400}
-                  alt={binType[0].alt}
-                  onClick={function () {
-                    handleClick(0);
-                  }}
-                />
-              </motion.div>
-              <motion.div
-                className="h-screen  flex items-center justify-center"
-                key={1}
-                whileHover={{ scale: 1.1 }}
-              >
-                <Image
-                  src={binType[1].src}
-                  width={400}
-                  height={400}
-                  alt={binType[1].alt}
-                  onClick={function () {
-                    handleClick(1);
-                  }}
-                />
-              </motion.div>
-              <motion.div key={2} whileHover={{ scale: 1.1 }}>
-                <Image
-                  src={binType[2].src}
-                  width={400}
-                  height={400}
-                  alt={binType[2].alt}
-                  onClick={function () {
-                    handleClick(2);
-                  }}
-                />
-              </motion.div>
-              <div className="items-center">
-                <Image
-                  src={prompts[promptIndex].url}
-                  className="place-items-center"
-                  width={225}
-                  height={225}
-                  alt={prompts[promptIndex].url}
-                />
+            <div className="h-[100vh] w-[100vw] justify-center items-center flex flex-col">
+              <div className="h-[50vh] w-[100vw] justify-center items-center flex">
+                <motion.div key={0} whileHover={{ scale: 1.1 }}>
+                  <Image
+                    src={binType[0].src}
+                    width={400}
+                    height={400}
+                    alt={binType[0].alt}
+                    onClick={function () {
+                      handleClick(0);
+                    }}
+                  />
+                </motion.div>
+                <motion.div
+                  className="h-screen  flex items-center justify-center"
+                  key={1}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Image
+                    src={binType[1].src}
+                    width={400}
+                    height={400}
+                    alt={binType[1].alt}
+                    onClick={function () {
+                      handleClick(1);
+                    }}
+                  />
+                </motion.div>
+                <motion.div key={2} whileHover={{ scale: 1.1 }}>
+                  <Image
+                    src={binType[2].src}
+                    width={400}
+                    height={400}
+                    alt={binType[2].alt}
+                    onClick={function () {
+                      handleClick(2);
+                    }}
+                  />
+                </motion.div>
+              </div>
+              <div className="items-center h-[50vh] flex gap-8">
+                <div className="relative">
+                  <Image
+                    src={prompts[promptIndex].url}
+                    className="place-items-center"
+                    width={225}
+                    height={225}
+                    alt={prompts[promptIndex].url}
+                  />
+                  <Image
+                    src={"/logo.png"}
+                    className="h-32 w-36 absolute -bottom-8 -right-12"
+                    width={200}
+                    height={200}
+                    alt="logo"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -139,9 +150,19 @@ export default function GameplayPage() {
       );
     } else {
       return (
-        <div>
-          <p>Your score is: {userScore}</p>
-          <button onClick={nextButtonClick}>YES YES YES!!!! AFFIRM</button>
+        <div style={{ backgroundColor: "#8FB6F4" }}>
+          <div className="h-[100vh] w-[100vw] justify-center items-center flex flex-col">
+            <p className="font-cabin text-5xl pb-4">
+              Your score is: {userScore}
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.1, backgroundColor: "#202AB7" }}
+              className="font-cabin text-white text-4xl bg-dark-blue px-3.5 py-1.25 rounded-3xl"
+              onClick={nextButtonClick}
+            >
+              Next
+            </motion.button>
+          </div>
         </div>
       );
     }

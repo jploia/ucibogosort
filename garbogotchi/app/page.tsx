@@ -18,7 +18,7 @@ export default function Main() {
         className="object-fill h-screen w-100%"
       >
         <div className="flex h-[100vh] w-[100vw] justify-center items-center">
-          <div>
+          <div className="mt-[130px]">
             {/* <Image
               src="/logo.png"
               height={80}
@@ -26,15 +26,24 @@ export default function Main() {
               alt="trashcan ant eater"
               className="flex justify-center content-center flex-wrap"
             /> */}
+            <div className="flex justify-center">
+              <Image
+                src="/logo.PNG"
+                width={100}
+                height={100}
+                alt="yes"
+                className="h-18 w-18"
+              />
+            </div>
             <div className="flex justify-center flex-wrap">
               <p className="font-cabin text-8xl">Garba</p>
               <p className="font-jersey text-8xl">gotchi</p>
             </div>
-            <p className="flex gap-[2rem] justify-center flex-wrap font-cabin text-md">
+            <p className="flex gap-[2rem] mt-[10px] justify-center flex-wrap font-cabin text-md">
               Learn what being in a top 10 Cool School means.
             </p>
             <Link
-              className="flex justify-center flex-wrap font-cabin text-md pt-4"
+              className="flex justify-center flex-wrap font-cabin text-md pt-6"
               href="/gameplay"
             >
               <motion.button
