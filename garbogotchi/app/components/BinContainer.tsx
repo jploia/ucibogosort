@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 export default function BinContainer(props: Readonly<{ bins: BinProps[] }>) {
   return (
     <>
-      <div className="flex gap-[2rem] min-h-screen justify-center items-center flex-wrap">
+      <div className="flex gap-[2rem]">
         {props.bins.map((bin, i) => {
           return (
             <motion.div key={i} whileHover={{ scale: 1.1 }}>
               <Image
-                //key={bin.key}
+                //priority={true}
                 src={bin.src}
                 width={400}
                 height={400}

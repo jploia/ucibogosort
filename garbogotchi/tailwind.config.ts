@@ -19,6 +19,7 @@ export default {
       colors: {
         "pale-purple": "#F2E7FF",
         "dark-blue": "#384EE0",
+        "light-blue": "#8FB6F4",
       },
     },
   },

@@ -17,7 +17,7 @@ export default function Main() {
         }}
         className="object-fill h-screen w-100%"
       >
-        <div className="flex absolute h-[100vh] w-[100vw] justify-center items-center">
+        <div className="flex h-[100vh] w-[100vw] justify-center items-center">
           <div>
             {/* <Image
               src="/logo.png"
