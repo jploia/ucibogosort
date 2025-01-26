@@ -1,3 +1,5 @@
-# ucibogosort
+# ucibogosort 🍌
 
 npm run dev
+
+backend: https://github.com/LegoIready/garbogatchi-back
