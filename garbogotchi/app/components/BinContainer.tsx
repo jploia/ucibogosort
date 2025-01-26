@@ -6,11 +6,11 @@ export default function BinContainer(props: Readonly<{ bins: BinProps[] }>) {
   return (
     <>
       <div className="flex gap-[2rem] min-h-screen justify-center items-center flex-wrap">
-        {props.bins.map((bin, index) => {
+        {props.bins.map((bin, i) => {
           return (
-            <motion.div whileHover={{ scale: 1.1 }}>
+            <motion.div key={i} whileHover={{ scale: 1.1 }}>
               <Image
-                key={index}
+                //key={bin.key}
                 src={bin.src}
                 width={400}
                 height={400}
