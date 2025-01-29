@@ -10,10 +10,11 @@ export default function Main() {
     <>
       <div
         style={{
-          backgroundImage: "url('/landingbg.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          // backgroundImage: "url('/landingbg.png')",
+          // backgroundRepeat: "no-repeat",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          backgroundColor: "#8FCCF4",
         }}
         className="object-fill h-screen w-100%"
       >
@@ -32,7 +33,7 @@ export default function Main() {
               <p className="font-cabin text-8xl">Garba</p>
               <p className="font-jersey text-8xl">gotchi</p>
             </div>
-            <p className="flex gap-[2rem] mt-[10px] justify-center flex-wrap font-cabin text-md">
+            <p className="flex gap-[2rem] pt-[10px] justify-center flex-wrap font-cabin text-md">
               Learn what being in a top 10 Cool School means.
             </p>
             <Link
@@ -46,6 +47,9 @@ export default function Main() {
                 Start
               </motion.button>
             </Link>
+            <p className="mt-10 inset-x-0 bottom-0 flex gap-[2rem] justify-center flex-wrap font-cabin">
+              Made with 💚 & 🗑 for 🐼 by Rose Enos, Julia Nguyen, Cynthia Ortiz
+            </p>
           </div>
         </div>
       </div>
